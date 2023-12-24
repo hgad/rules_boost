@@ -582,6 +582,25 @@ boost_library(
 )
 
 boost_library(
+    name = "cobalt",
+    deps = [
+        ":asio",
+        ":circular_buffer",
+        ":config",
+        ":container",
+        ":core",
+        ":intrusive",
+        ":leaf",
+        ":mp11",
+        ":preprocessor",
+        ":smart_ptr",
+        ":system",
+        ":throw_exception",
+        ":variant2",
+    ],
+)
+
+boost_library(
     name = "compute",
     linkopts = selects.with_or({
         # OpenCL (required for Boost.Compute) is deprecated on macOS and not supported on other Apple OSs.
